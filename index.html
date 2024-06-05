@@ -4,189 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ollama Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        img {
+            display: block;
+            margin: 0 auto 20px;
+        }
+        h1, h2, h3 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            text-align: justify;
+            margin: 10px 0;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        ol {
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-    <img src="image.png" alt="Ollama">
-    <h1>Welcome to My GitHub Blog: Introduction to Ollama</h1>
-    <p>Ollama is a highly advanced AI framework designed to develop intelligent applications using Large Language Models (LLMs). It provides developers with a variety of tools to build chatbots, Natural Language Processing (NLP) systems, and other AI-driven applications. Ollama's design emphasizes ease of use and integration, making it a powerful tool in AI development.</p>
-    <h2>Key Concepts and Technologies</h2>
-    <h3>Language Models</h3>
-    <p>Ollama leverages cutting-edge LLMs to understand and generate human-like text. These models are trained on vast datasets, offering strong language processing capabilities. By fine-tuning, these models can be optimized for specific tasks, delivering outstanding performance in various applications.</p>
-    <h3>Prompt Engineering</h3>
-    <p>Prompt engineering is a critical technique when using Ollama. It involves designing effective input prompts to guide the model in generating relevant and accurate content. The goal of prompt engineering is to enhance the quality and relevance of the model's responses through skillful prompt design.</p>
-    <h2>Deployment Solutions</h2>
-    <h3>Cloud Deployment</h3>
-    <p>Ollama can be deployed on multiple cloud platforms, including AWS, Google Cloud, and Azure. Cloud deployment offers high scalability and flexibility, enabling developers to handle workloads of different scales and seamlessly integrate with other cloud services. The advantage of cloud deployment lies in its convenient resource management and on-demand scalability.</p>
-    <h3>Local Deployment</h3>
-    <p>For applications that require on-premises solutions, Ollama also supports local deployment. This deployment method is suitable for organizations with specific security or latency requirements. By deploying locally, data can remain within the organization's infrastructure, ensuring data security and privacy. Local deployment can also reduce data transmission latency, improving application responsiveness.</p>
-    <h2>Technical Implementation of Ollama</h2>
-    <h3>Data Processing and Training</h3>
-    <p>Ollama's language models are trained on large-scale datasets, including various types of text data such as news, books, and social media content. This extensive data enables the models to understand complex language structures and contextual relationships. During training, advanced deep learning algorithms, like the Transformer architecture, are used to enhance the model's performance and accuracy.</p>
-    <h3>Fine-Tuning and Customization</h3>
-    <p>Ollama allows developers to fine-tune models to meet specific application needs. By using custom datasets, developers can adjust the model's parameters to perform better on specific tasks. For example, a chatbot focused on the medical field can be fine-tuned using medical text datasets to provide more professional and accurate answers.</p>
-    <h2>Deployment Practices</h2>
-    <h3>Deploying on AWS</h3>
-    <p>To deploy Ollama on AWS, you can utilize its rich cloud services such as EC2 instances, S3 storage, and Lambda functions. Here is a simple deployment procedure:</p>
-    <ol>
-        <li>Create an EC2 Instance: In the AWS management console, create a new EC2 instance and configure the security group and network settings.</li>
-        <li>Install Ollama: Connect to the EC2 instance and use command-line tools to install Ollama and its dependencies.</li>
-    </ol>
-    <pre><code>sudo apt-get update
+    <div class="container">
+        <img src="images/image.png" alt="Ollama">
+        <h1>Welcome to My GitHub Blog: Introduction to Ollama</h1>
+        <p>Ollama is a highly advanced AI framework designed to develop intelligent applications using Large Language Models (LLMs). It provides developers with a variety of tools to build chatbots, Natural Language Processing (NLP) systems, and other AI-driven applications. Ollama's design emphasizes ease of use and integration, making it a powerful tool in AI development.</p>
+        
+        <h2>Key Concepts and Technologies</h2>
+        <h3>Language Models</h3>
+        <p>Ollama leverages cutting-edge LLMs to understand and generate human-like text. These models are trained on vast datasets, offering strong language processing capabilities. By fine-tuning, these models can be optimized for specific tasks, delivering outstanding performance in various applications.</p>
+        
+        <h3>Prompt Engineering</h3>
+        <p>Prompt engineering is a critical technique when using Ollama. It involves designing effective input prompts to guide the model in generating relevant and accurate content. The goal of prompt engineering is to enhance the quality and relevance of the model's responses through skillful prompt design.</p>
+        
+        <h2>Deployment Solutions</h2>
+        <h3>Cloud Deployment</h3>
+        <p>Ollama can be deployed on multiple cloud platforms, including AWS, Google Cloud, and Azure. Cloud deployment offers high scalability and flexibility, enabling developers to handle workloads of different scales and seamlessly integrate with other cloud services. The advantage of cloud deployment lies in its convenient resource management and on-demand scalability.</p>
+        
+        <h3>Local Deployment</h3>
+        <p>For applications that require on-premises solutions, Ollama also supports local deployment. This deployment method is suitable for organizations with specific security or latency requirements. By deploying locally, data can remain within the organization's infrastructure, ensuring data security and privacy. Local deployment can also reduce data transmission latency, improving application responsiveness.</p>
+        
+        <h2>Technical Implementation of Ollama</h2>
+        <h3>Data Processing and Training</h3>
+        <p>Ollama's language models are trained on large-scale datasets, including various types of text data such as news, books, and social media content. This extensive data enables the models to understand complex language structures and contextual relationships. During training, advanced deep learning algorithms, like the Transformer architecture, are used to enhance the model's performance and accuracy.</p>
+        
+        <h3>Fine-Tuning and Customization</h3>
+        <p>Ollama allows developers to fine-tune models to meet specific application needs. By using custom datasets, developers can adjust the model's parameters to perform better on specific tasks. For example, a chatbot focused on the medical field can be fine-tuned using medical text datasets to provide more professional and accurate answers.</p>
+        
+        <h2>Deployment Practices</h2>
+        <h3>Deploying on AWS</h3>
+        <p>To deploy Ollama on AWS, you can utilize its rich cloud services such as EC2 instances, S3 storage, and Lambda functions. Here is a simple deployment procedure:</p>
+        <ol>
+            <li>Create an EC2 Instance: In the AWS management console, create a new EC2 instance and configure the security group and network settings.</li>
+            <li>Install Ollama: Connect to the EC2 instance and use command-line tools to install Ollama and its dependencies.</li>
+        </ol>
+        <pre><code>sudo apt-get update
 sudo apt-get install python3-pip
 pip3 install ollama-sdk</code></pre>
-    <ol start="3">
-        <li>Configure the Model: Upload the trained model files to the instance and configure the application to use these models.</li>
-        <li>Launch the Application: Run the application, ensuring it starts correctly and can handle requests.</li>
-    </ol>
-    <h3>Deploying on Google Cloud</h3>
-    <p>Deploying Ollama on Google Cloud can also utilize its powerful cloud computing resources. The basic steps are:</p>
-    <ol>
-        <li>Create a Compute Engine Instance: In the Google Cloud console, create a new Compute Engine instance.</li>
-        <li>Install Ollama: Connect to the instance, then install the necessary software and Ollama.</li>
-    </ol>
-    <pre><code>sudo apt-get update
+        <ol start="3">
+            <li>Configure the Model: Upload the trained model files to the instance and configure the application to use these models.</li>
+            <li>Launch the Application: Run the application, ensuring it starts correctly and can handle requests.</li>
+        </ol>
+        
+        <h3>Deploying on Google Cloud</h3>
+        <p>Deploying Ollama on Google Cloud can also utilize its powerful cloud computing resources. The basic steps are:</p>
+        <ol>
+            <li>Create a Compute Engine Instance: In the Google Cloud console, create a new Compute Engine instance.</li>
+            <li>Install Ollama: Connect to the instance, then install the necessary software and Ollama.</li>
+        </ol>
+        <pre><code>sudo apt-get update
 sudo apt-get install python3-pip
 pip3 install ollama-sdk</code></pre>
-    <ol start="3">
-        <li>Upload the Model: Upload the model files to the instance and configure the application.</li>
-        <li>Launch the Application: Ensure the application runs correctly.</li>
-    </ol>
-    <h3>Deploying on Azure</h3>
-    <p>To deploy Ollama on Azure, leverage its flexible computing resources and services. The steps are as follows:</p>
-    <ol>
-        <li>Create a Virtual Machine: In the Azure portal, create a new virtual machine and configure the network and security settings.</li>
-        <li>Install Ollama: Connect to the virtual machine and install Ollama and its dependencies.</li>
-    </ol>
-    <pre><code>sudo apt-get update
+        <ol start="3">
+            <li>Upload the Model: Upload the model files to the instance and configure the application.</li>
+            <li>Launch the Application: Ensure the application runs correctly.</li>
+        </ol>
+        
+        <h3>Deploying on Azure</h3>
+        <p>To deploy Ollama on Azure, leverage its flexible computing resources and services. The steps are as follows:</p>
+        <ol>
+            <li>Create a Virtual Machine: In the Azure portal, create a new virtual machine and configure the network and security settings.</li>
+            <li>Install Ollama: Connect to the virtual machine and install Ollama and its dependencies.</li>
+        </ol>
+        <pre><code>sudo apt-get update
 sudo apt-get install python3-pip
 pip3 install ollama-sdk</code></pre>
-    <ol start="3">
-        <li>Configure the Model: Upload the model files to the virtual machine and configure the application.</li>
-        <li>Launch the Application: Ensure the application runs and handles requests properly.</li>
-    </ol>
-    <h2>Advantages of Local Deployment</h2>
-    <h3>Security</h3>
-    <p>Local deployment ensures that data is processed within the organization, avoiding the risks of transmitting data to external servers. This method offers higher security for applications involving sensitive data.</p>
-    <h3>Low Latency</h3>
-    <p>Local deployment can significantly reduce data transmission latency, improving application response times. This is crucial for real-time applications like financial trading systems or medical diagnostic systems.</p>
-    <h3>Full Control</h3>
-    <p>Local deployment allows organizations to have complete control over the infrastructure and data processing workflow. This ensures the system runs as expected and can be adjusted and optimized as needed.</p>
-    <h2>Development Example: Building a Chatbot with Ollama</h2>
-    <h3>Setting Up the Environment</h3>
-    <pre><code>pip install ollama-sdk
+        <ol start="3">
+            <li>Configure the Model: Upload the model files to the virtual machine and configure the application.</li>
+            <li>Launch the Application: Ensure the application runs and handles requests properly.</li>
+        </ol>
+        
+        <h2>Advantages of Local Deployment</h2>
+        <h3>Security</h3>
+        <p>Local deployment ensures that data is processed within the organization, avoiding the risks of transmitting data to external servers. This method offers higher security for applications involving sensitive data.</p>
+        <h3>Low Latency</h3>
+        <p>Local deployment can significantly reduce data transmission latency, improving application response times. This is crucial for real-time applications like financial trading systems or medical diagnostic systems.</p>
+        <h3>Full Control</h3>
+        <p>Local deployment allows organizations to have complete control over the infrastructure and data processing workflow. This ensures the system runs as expected and can be adjusted and optimized as needed.</p>
+        
+        <h2>Development Example: Building a Chatbot with Ollama</h2>
+        <h3>Setting Up the Environment</h3>
+        <pre><code>pip install ollama-sdk
 ollama init my-chatbot</code></pre>
-    <h3>Defining Prompts</h3>
-    <pre><code>from ollama import Ollama
+        <h3>Defining Prompts</h3>
+        <pre><code>from ollama import Ollama
 prompt = "You are a helpful assistant."
 chatbot = Ollama(model="gpt-4", prompt=prompt)</code></pre>
-    <h3>Integrating into the Application</h3>
-    <pre><code>response = chatbot.ask("What should I do today?")
+        <h3>Integrating into the Application</h3>
+        <pre><code>response = chatbot.ask("What should I do today?")
 print(response)</code></pre>
-    <h2>How to Fine-Tune Models with Ollama</h2>
-    <h3>Concept and Technology</h3>
-    <p>Fine-tuning improves a pre-trained model's performance on a specific task by further training it with task-specific data. Ollama uses this technology to make its models better suited to different domains.</p>
-    <h3>Preparation</h3>
-    <h4>Install Necessary Tools</h4>
-    <pre><code>pip install ollama-sdk</code></pre>
-    <h4>Prepare the Dataset</h4>
-    <p>Collect and organize a dataset suitable for the specific task. The data should include high-quality examples to help the model learn task-relevant patterns and features.</p>
-    <h3>Fine-Tuning Process</h3>
-    <h4>Load the Pre-Trained Model</h4>
-    <pre><code>from ollama import Ollama
+        
+        <h2>How to Fine-Tune Models with Ollama</h2>
+        <h3>Concept and Technology</h3>
+        <p>Fine-tuning improves a pre-trained model's performance on a specific task by further training it with task-specific data. Ollama uses this technology to make its models better suited to different domains.</p>
+        
+        <h3>Preparation</h3>
+        <h4>Install Necessary Tools</h4>
+        <pre><code>pip install ollama-sdk</code></pre>
+        <h4>Prepare the Dataset</h4>
+        <p>Collect and organize a dataset suitable for the specific task. The data should include high-quality examples to help the model learn task-relevant patterns and features.</p>
+        
+        <h3>Fine-Tuning Process</h3>
+        <h4>Load the Pre-Trained Model</h4>
+        <pre><code>from ollama import Ollama
 model = Ollama(model_name="gpt-4")</code></pre>
-    <h4>Prepare the Data</h4>
-    <pre><code>import pandas as pd
-data```markdown
-# Welcome to My GitHub Blog: Introduction to Ollama
-
-![Ollama](https://github.com/zhanchunxiao/myblog/blob/main/image.png)
-
-## What is Ollama?
-
-Ollama is a highly advanced AI framework designed to develop intelligent applications using Large Language Models (LLMs). It provides developers with a variety of tools to build chatbots, Natural Language Processing (NLP) systems, and other AI-driven applications. Ollama's design emphasizes ease of use and integration, making it a powerful tool in AI development.
-
-## Key Concepts and Technologies
-
-### Language Models
-Ollama leverages cutting-edge LLMs to understand and generate human-like text. These models are trained on vast datasets, offering strong language processing capabilities. By fine-tuning, these models can be optimized for specific tasks, delivering outstanding performance in various applications.
-
-### Prompt Engineering
-Prompt engineering is a critical technique when using Ollama. It involves designing effective input prompts to guide the model in generating relevant and accurate content. The goal of prompt engineering is to enhance the quality and relevance of the model's responses through skillful prompt design.
-
-## Deployment Solutions
-
-### Cloud Deployment
-Ollama can be deployed on multiple cloud platforms, including AWS, Google Cloud, and Azure. Cloud deployment offers high scalability and flexibility, enabling developers to handle workloads of different scales and seamlessly integrate with other cloud services. The advantage of cloud deployment lies in its convenient resource management and on-demand scalability.
-
-### Local Deployment
-For applications that require on-premises solutions, Ollama also supports local deployment. This deployment method is suitable for organizations with specific security or latency requirements. By deploying locally, data can remain within the organization's infrastructure, ensuring data security and privacy. Local deployment can also reduce data transmission latency, improving application responsiveness.
-
-## Technical Implementation of Ollama
-
-### Data Processing and Training
-Ollama's language models are trained on large-scale datasets, including various types of text data such as news, books, and social media content. This extensive data enables the models to understand complex language structures and contextual relationships. During training, advanced deep learning algorithms, like the Transformer architecture, are used to enhance the model's performance and accuracy.
-
-### Fine-Tuning and Customization
-Ollama allows developers to fine-tune models to meet specific application needs. By using custom datasets, developers can adjust the model's parameters to perform better on specific tasks. For example, a chatbot focused on the medical field can be fine-tuned using medical text datasets to provide more professional and accurate answers.
-
-## Deployment Practices
-
-### Deploying on AWS
-To deploy Ollama on AWS, you can utilize its rich cloud services such as EC2 instances, S3 storage, and Lambda functions. Here is a simple deployment procedure:
-
-1. **Create an EC2 Instance**: In the AWS management console, create a new EC2 instance and configure the security group and network settings.
-2. **Install Ollama**: Connect to the EC2 instance and use command-line tools to install Ollama and its dependencies.
-    ```bash
-    sudo apt-get update
-    sudo apt-get install python3-pip
-    pip3 install ollama-sdk
-    ```
-3. **Configure the Model**: Upload the trained model files to the instance and configure the application to use these models.
-4. **Launch the Application**: Run the application, ensuring it starts correctly and can handle requests.
-
-### Deploying on Google Cloud
-Deploying Ollama on Google Cloud can also utilize its powerful cloud computing resources. The basic steps are:
-
-1. **Create a Compute Engine Instance**: In the Google Cloud console, create a new Compute Engine instance.
-2. **Install Ollama**: Connect to the instance, then install the necessary software and Ollama.
-    ```bash
-    sudo apt-get update
-    sudo apt-get install python3-pip
-    pip3 install ollama-sdk
-    ```
-3. **Upload the Model**: Upload the model files to the instance and configure the application.
-4. **Launch the Application**: Ensure the application runs correctly.
-
-### Deploying on Azure
-To deploy Ollama on Azure, leverage its flexible computing resources and services. The steps are as follows:
-
-1. **Create a Virtual Machine**: In the Azure portal, create a new virtual machine and configure the network and security settings.
-2. **Install Ollama**: Connect to the virtual machine and install Ollama and its dependencies.
-    ```bash
-    sudo apt-get update
-    sudo apt-get install python3-pip
-    pip3 install ollama-sdk
-    ```
-3. **Configure the Model**: Upload the model files to the virtual machine and configure the application.
-4. **Launch the Application**: Ensure the application runs and handles requests properly.
-
-## Advantages of Local Deployment
-
-### Security
-Local deployment ensures that data is processed within the organization, avoiding the risks of transmitting data to external servers. This method offers higher security for applications involving sensitive data.
-
-### Low Latency
-Local deployment can significantly reduce data transmission latency, improving application response times. This is crucial for real-time applications like financial trading systems or medical diagnostic systems.
-
-### Full Control
-Local deployment allows organizations to have complete control over the infrastructure and data processing workflow. This ensures the system runs as expected and can be adjusted and optimized as needed.
-
-## Development Example: Building a Chatbot with Ollama
-
-### Setting Up the Environment
-Install the Ollama SDK and initialize the project.
-```bash
-pip install ollama-sdk
-ollama init my-chatbot
-
-    </code>body>
+        <h4>Prepare the Data</h4>
+        <pre><code>import pandas as pd
+data = pd.read_csv('data/task_data.csv
