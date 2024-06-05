@@ -149,4 +149,45 @@ print(response)</code></pre>
 model = Ollama(model_name="gpt-4")</code></pre>
         <h4>Prepare the Data</h4>
         <pre><code>import pandas as pd
-data = pd.read_csv('data/task_data.csv
+data = pd.read_csv('data/task_data.csv```html
+import pandas as pd
+data = pd.read_csv('data/task_data.csv')
+inputs = data['input_text'].tolist()
+labels = data['label_text'].tolist()
+</code></pre>
+
+<h4>Define Fine-Tuning Parameters</h4>
+<pre><code>training_params = {
+    "learning_rate": 2e-5,
+    "batch_size": 16,
+    "num_epochs": 3
+}
+</code></pre>
+
+<h4>Fine-Tune the Model</h4>
+<pre><code>model.fine_tune(inputs, labels, training_params)
+</code></pre>
+
+<h4>Evaluate the Model</h4>
+<pre><code>validation_data = pd.read_csv('data/validation_data.csv')
+val_inputs = validation_data['input_text'].tolist()
+val_labels = validation_data['label_text'].tolist()
+
+evaluation_results = model.evaluate(val_inputs, val_labels)
+print(evaluation_results)
+</code></pre>
+
+<h2>Deploying the Fine-Tuned Model</h2>
+<h3>Save the Model</h3>
+<pre><code>model.save('fine_tuned_model')
+</code></pre>
+
+<h3>Deploy the Model</h3>
+<pre><code>ollama deploy --model fine_tuned_model --platform aws
+</code></pre>
+
+<p>Through these steps, developers can fine-tune Ollama models to create more precise and efficient AI applications. Whether for text classification, sentiment analysis, or other NLP tasks, Ollama's fine-tuning capabilities significantly enhance model performance.</p>
+</div>
+</body>
+</html>
+
